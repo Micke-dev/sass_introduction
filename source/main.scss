@@ -1,0 +1,47 @@
+$corPincipal: #f5f6fa;
+$corSecundaria: #182C61;
+$corTexto: #fff;
+$corProdutos: #44bd32;
+
+@mixin elementoProduct() {
+    color: $corTexto;
+    text-decoration: none;
+}
+
+body {
+    background-color: $corPincipal;
+}
+
+header {
+    background-color: $corSecundaria;
+}
+
+.product-button {
+    display: block;
+    background-color: $corProdutos;
+    color:$corTexto;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    @include elementoProduct()
+    &: #4cd137;
+}
+
+.product {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    .item img{
+    width: 100%;
+    border-radius: 16px;
+    }
+}
+
+.menu li a {
+    @include elementoProduct()
+}
